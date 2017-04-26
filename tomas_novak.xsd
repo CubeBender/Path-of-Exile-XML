@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="profile" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="graphics">
+                <xs:complexType>
+                  <xs:sequence>
+                  
+                    <xs:element type="xs:string" name="adapter"/>
+                    
+                    <xs:element type="d-mode" name="display_mode"/>
+                    
+                    <xs:element name="resolution">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="aspect-ratio" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="vsync">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="xs:float" name="limit-fps" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="shadows" name="shadow_quality"/>
+                    
+                    <xs:element name="antialiasing_quality">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="multi">
+                            <xs:attribute type="antialiasing-type" name="antialiasing-type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="textures" name="texture_quality"/>
+                    
+                    <xs:element name="texture_filtering">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="multi">
+                            <xs:attribute type="filtering-type" name="filtering-type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="xs:boolean" name="post_processing"/>
+                    
+                    <xs:element type="xs:boolean" name="screen_shake"/>
+                    
+                    <xs:element type="xs:boolean" name="engine_multithreading"/>
+                    
+                    <xs:element type="directx" name="directx_version"/>
+                    
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sound">
+                <xs:complexType>
+                  <xs:sequence>
+                  
+                    <xs:element name="device">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:boolean" name="selectable" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="channels" name="channel_count"/>
+                    
+                    <xs:element name="sound_effects_volume">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="scale">
+                            <xs:attribute type="xs:boolean" name="use-master-setting" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="music_volume">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="scale">
+                            <xs:attribute type="xs:boolean" name="use-master-setting" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="ambient_sound_volume">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="scale">
+                            <xs:attribute type="xs:boolean" name="use-master-setting" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="dialogue_volume">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="scale">
+                            <xs:attribute type="xs:boolean" name="use-master-setting" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="item_filter_alert_volume">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="scale">
+                            <xs:attribute type="xs:boolean" name="use-master-setting" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="xs:boolean" name="reverb_enabled"/>
+                    
+                    <xs:element type="xs:boolean" name="mute_when_in_background"/>
+                    
+                    <xs:element type="xs:boolean" name="disable_gameplay_event_voices"/>
+                    
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ui">
+                <xs:complexType>
+                  <xs:sequence>
+                  
+                    <xs:element type="langs" name="language"/>
+                    
+                    <xs:element type="langs-chat" name="chat_language"/>
+                    
+                    <xs:element type="networking" name="networking_mode"/>
+                    
+                    <xs:element type="xs:boolean" name="enable_quest_tracking"/>
+                    
+                    <xs:element type="xs:boolean" name="show_corner_map"/>
+                    
+                    <xs:element type="xs:boolean" name="auto-center_map"/>
+                    
+                    <xs:element type="scale" name="map_transparency"/>
+                    
+                    <xs:element type="xs:boolean" name="always_highlight"/>
+                    
+                    <xs:element type="xs:boolean" name="always_show_sockets"/>
+                    
+                    <xs:element name="key_pickup">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="pickup">
+                            <xs:attribute type="keybinding" name="keybinding" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="xs:string" name="show_full_descriptions"/>
+                    
+                    <xs:element name="show_life_mana_levels">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="xs:boolean" name="disable-for-chaos-inoculation" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="corpse_targeting">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="keybinding" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="show_global_chat">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="colour" name="colour" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="show_trade_chat">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="colour" name="colour" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="show_guild_chat">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="colour" name="colour" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="xs:boolean" name="show_timestamps_in_chat"/>
+                    
+                    <xs:element type="xs:boolean" name="show_mini_life_bars_on_allies"/>
+                    
+                    <xs:element type="xs:boolean" name="show_mini_life_bars_on_enemies"/>
+                    
+                    <xs:element type="xs:boolean" name="show_mini_life_bars_above_you"/>
+                    
+                    <xs:element type="xs:boolean" name="show_ally_names_on_your_map"/>
+                    
+                    <xs:element name="show_clock">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute type="xs:string" name="timezone" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element type="xs:boolean" name="output_dialogue_to_chat"/>
+                    
+                    <xs:element type="xs:boolean" name="mousewheel_zoom"/>
+                    
+                    <xs:element type="xs:boolean" name="confine_mouse_to_window"/>
+                    
+                    <xs:element type="xs:boolean" name="enable_tutorials"/>
+                    
+                    <xs:element type="allocation" name="default_loot_allocation"/>
+                    
+                    <xs:element type="font-size" name="chat_font_size"/>
+                    
+                    <xs:element name="chat_box_width">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:nonNegativeInteger">
+                            <xs:attribute type="chat-size" name="size" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="chat_box_height">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:nonNegativeInteger">
+                            <xs:attribute type="xs:string" name="size" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="list_of_item_filters">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:boolean" name="autoload" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="user" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Omezení -->
+  
+   <!-- Omezení nastavení módu zobrazení -->
+  <xs:simpleType name="d-mode">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Windowed"/>
+    <xs:enumeration value="Fullscreen"/>
+    <xs:enumeration value="Windowed Fullscreen"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení stínů -->
+  <xs:simpleType name="shadows">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Off"/>
+    <xs:enumeration value="Low"/>
+    <xs:enumeration value="High"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení kvality Xx -->
+  <xs:simpleType name="multi">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Off"/>
+    <xs:enumeration value="2x"/>
+    <xs:enumeration value="4x"/>
+    <xs:enumeration value="8x"/>
+    <xs:enumeration value="16x"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení typu vyhlazování -->
+  <xs:simpleType name="antialiasing-type">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="SMAA"/>
+    <xs:enumeration value="MSAA"/>
+    <xs:enumeration value="FXAA"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení kvality textur -->
+  <xs:simpleType name="textures">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Low"/>
+    <xs:enumeration value="High"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení vyhlazování -->
+  <xs:simpleType name="filtering-type">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Trilinear"/>
+    <xs:enumeration value="Anisotropic"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení directx -->
+  <xs:simpleType name="directx">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Auto"/>
+    <xs:enumeration value="DirectX 9"/>
+    <xs:enumeration value="DirectX 9Ex"/>
+    <xs:enumeration value="DirectX 11"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení poměru stran -->
+  <xs:simpleType name="aspect-ratio">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="custom"/>
+    <xs:enumeration value="16:10"/>
+    <xs:enumeration value="16:9"/>
+    <xs:enumeration value="5:4"/>
+    <xs:enumeration value="4:3"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení počtu audio kanálů -->
+  <xs:simpleType name="channels">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Low"/>
+    <xs:enumeration value="Medium"/>
+    <xs:enumeration value="High"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- Omezení nastavení hodnot od 0 do 100-->
+  <xs:simpleType name="scale">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení jazyka -->
+  <xs:simpleType name="langs">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="English"/>
+    <xs:enumeration value="French"/>
+    <xs:enumeration value="Italian"/>
+    <xs:enumeration value="Russian"/>
+    <xs:enumeration value="German"/>
+    <xs:enumeration value="Polsky"/>
+    <xs:enumeration value="Portugaes (Brazil)"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení jazyka pro chat -->
+  <xs:simpleType name="langs-chat">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Same as Language"/>
+    <xs:enumeration value="English"/>
+    <xs:enumeration value="French"/>
+    <xs:enumeration value="Italian"/>
+    <xs:enumeration value="Russian"/>
+    <xs:enumeration value="German"/>
+    <xs:enumeration value="Polsky"/>
+    <xs:enumeration value="Portugaes (Brazil)"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení typu synchronizace se serverem -->
+  <xs:simpleType name="networking">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Auto"/>
+    <xs:enumeration value="Lockstep"/>
+    <xs:enumeration value="Predictive"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení typu sbírání předmětů -->
+  <xs:simpleType name="pickup">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Disabled"/>
+    <xs:enumeration value="Use Highlight Key"/>
+    <xs:enumeration value="Use Bound Key"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení klávesové zkratky pro sbírání předmětů -->
+  <xs:simpleType name="keybinding">
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[a-zA-Z0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Seznam povolených barev -->
+  <xs:simpleType name="colour">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="white"/>
+    <xs:enumeration value="black"/>
+    <xs:enumeration value="yellow"/>
+    <xs:enumeration value="blue"/>
+    <xs:enumeration value="green"/>
+    <xs:enumeration value="pink"/>
+    <xs:enumeration value="red"/>
+    <xs:enumeration value="grey"/>
+    <xs:enumeration value="cyan"/>
+    <xs:enumeration value="teal"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení typu alokace předmětů -->
+  <xs:simpleType name="allocation">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Free For All"/>
+    <xs:enumeration value="Short Allocation"/>
+    <xs:enumeration value="Permanent Allocation"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení velikosti písma -->
+  <xs:simpleType name="font-size">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="Small"/>
+    <xs:enumeration value="Normal"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení tvelikosti chatu -->
+  <xs:simpleType name="chat-size">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="relative"/>
+    <xs:enumeration value="absolute"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

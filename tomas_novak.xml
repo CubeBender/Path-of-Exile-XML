@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tomas_novak.xsl"?>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tomas_novak.xsd">
+
+  <profile user="cubebender">
+  
+    <graphics>
+      <adapter>NVIDIA GeForce GTX 970</adapter>
+      <display_mode>Windowed</display_mode>
+      <resolution aspect-ratio="custom">1282x961</resolution>
+      <vsync limit-fps="60.00">false</vsync>
+      <shadow_quality>High</shadow_quality>
+      <antialiasing_quality antialiasing-type="SMAA">Off</antialiasing_quality>
+      <texture_quality>High</texture_quality>
+      <texture_filtering filtering-type="Anisotropic">2x</texture_filtering>
+      <post_processing>true</post_processing>
+      <screen_shake>false</screen_shake>
+      <engine_multithreading>true</engine_multithreading>
+      <directx_version>Auto</directx_version>
+    </graphics>
+    
+    <sound>
+      <device selectable="false">ASUS MG279</device>
+      <channel_count>Medium</channel_count>
+      <sound_effects_volume use-master-setting="false">5</sound_effects_volume>
+      <music_volume use-master-setting="false">5</music_volume>
+      <ambient_sound_volume use-master-setting="false">5</ambient_sound_volume>
+      <dialogue_volume use-master-setting="false">5</dialogue_volume>
+      <item_filter_alert_volume use-master-setting="false">50</item_filter_alert_volume>
+      <reverb_enabled>true</reverb_enabled>
+      <mute_when_in_background>false</mute_when_in_background>
+      <disable_gameplay_event_voices>false</disable_gameplay_event_voices>
+    </sound>
+    
+    <ui>
+      <language>English</language>
+      <chat_language>Same as Language</chat_language>
+      <networking_mode>Lockstep</networking_mode>
+      <enable_quest_tracking>true</enable_quest_tracking>
+      <show_corner_map>true</show_corner_map>
+      <auto-center_map>false</auto-center_map>
+      <map_transparency>60</map_transparency>
+      <always_highlight>true</always_highlight>
+      <always_show_sockets>true</always_show_sockets>
+      <key_pickup keybinding="Z">Disabled</key_pickup>
+      <show_full_descriptions>true</show_full_descriptions>
+      <show_life_mana_levels disable-for-chaos-inoculation="true">true</show_life_mana_levels>
+      <corpse_targeting keybinding="A">When Key Held</corpse_targeting>
+      <show_global_chat colour="grey">false</show_global_chat>
+      <show_trade_chat colour="green">false</show_trade_chat>
+      <show_guild_chat colour="white">true</show_guild_chat>
+      <show_timestamps_in_chat>true</show_timestamps_in_chat>
+      <show_mini_life_bars_on_allies>true</show_mini_life_bars_on_allies>
+      <show_mini_life_bars_on_enemies>true</show_mini_life_bars_on_enemies>
+      <show_mini_life_bars_above_you>false</show_mini_life_bars_above_you>
+      <show_ally_names_on_your_map>true</show_ally_names_on_your_map>
+      <show_clock timezone="CET+1">true</show_clock>
+      <output_dialogue_to_chat>false</output_dialogue_to_chat>
+      <mousewheel_zoom>false</mousewheel_zoom>
+      <confine_mouse_to_window>false</confine_mouse_to_window>
+      <enable_tutorials>true</enable_tutorials>
+      <default_loot_allocation>Short Allocation</default_loot_allocation>
+      <chat_font_size>Normal</chat_font_size>
+      <chat_box_width size="relative">50</chat_box_width>
+      <chat_box_height size="relative">45</chat_box_height>
+      <list_of_item_filters autoload="true">NeverSink's filter REGULAR</list_of_item_filters>
+    </ui>
+    
+  </profile>
+
+  <profile user="PCmasterrace">
+  
+    <graphics>
+      <adapter>NVIDIA GeForce GTX 1080 TI</adapter>
+      <display_mode>Fullscreen</display_mode>
+      <resolution aspect-ratio="custom">2560x1440</resolution>
+      <vsync limit-fps="120.00">true</vsync>
+      <shadow_quality>High</shadow_quality>
+      <antialiasing_quality antialiasing-type="SMAA">16x</antialiasing_quality>
+      <texture_quality>High</texture_quality>
+      <texture_filtering filtering-type="Anisotropic">16x</texture_filtering>
+      <post_processing>true</post_processing>
+      <screen_shake>true</screen_shake>
+      <engine_multithreading>true</engine_multithreading>
+      <directx_version>DirectX 11</directx_version>
+    </graphics>
+    
+    <sound>
+      <device selectable="true">LG 27UD68P-B</device>
+      <channel_count>High</channel_count>
+      <sound_effects_volume use-master-setting="false">50</sound_effects_volume>
+      <music_volume use-master-setting="false">50</music_volume>
+      <ambient_sound_volume use-master-setting="false">50</ambient_sound_volume>
+      <dialogue_volume use-master-setting="false">50</dialogue_volume>
+      <item_filter_alert_volume use-master-setting="false">70</item_filter_alert_volume>
+      <reverb_enabled>true</reverb_enabled>
+      <mute_when_in_background>true</mute_when_in_background>
+      <disable_gameplay_event_voices>false</disable_gameplay_event_voices>
+    </sound>
+    
+    <ui>
+      <language>Italian</language>
+      <chat_language>English</chat_language>
+      <networking_mode>Lockstep</networking_mode>
+      <enable_quest_tracking>true</enable_quest_tracking>
+      <show_corner_map>true</show_corner_map>
+      <auto-center_map>true</auto-center_map>
+      <map_transparency>45</map_transparency>
+      <always_highlight>true</always_highlight>
+      <always_show_sockets>false</always_show_sockets>
+      <key_pickup keybinding="U">Disabled</key_pickup>
+      <show_full_descriptions>Flalse</show_full_descriptions>
+      <show_life_mana_levels disable-for-chaos-inoculation="true">false</show_life_mana_levels>
+      <corpse_targeting keybinding="A">When Key Held</corpse_targeting>
+      <show_global_chat colour="grey">true</show_global_chat>
+      <show_trade_chat colour="green">true</show_trade_chat>
+      <show_guild_chat colour="white">true</show_guild_chat>
+      <show_timestamps_in_chat>false</show_timestamps_in_chat>
+      <show_mini_life_bars_on_allies>false</show_mini_life_bars_on_allies>
+      <show_mini_life_bars_on_enemies>false</show_mini_life_bars_on_enemies>
+      <show_mini_life_bars_above_you>false</show_mini_life_bars_above_you>
+      <show_ally_names_on_your_map>true</show_ally_names_on_your_map>
+      <show_clock timezone="CET+0">true</show_clock>
+      <output_dialogue_to_chat>false</output_dialogue_to_chat>
+      <mousewheel_zoom>true</mousewheel_zoom>
+      <confine_mouse_to_window>false</confine_mouse_to_window>
+      <enable_tutorials>true</enable_tutorials>
+      <default_loot_allocation>Free For All</default_loot_allocation>
+      <chat_font_size>Normal</chat_font_size>
+      <chat_box_width size="relative">50</chat_box_width>
+      <chat_box_height size="relative">50</chat_box_height>
+      <list_of_item_filters autoload="true">None</list_of_item_filters>
+    </ui>
+    
+  </profile>
+
+  <profile user="P0T4T0xXx1337xXx">
+  
+    <graphics>
+      <adapter>INTEL IRIS Graphics</adapter>
+      <display_mode>Windowed</display_mode>
+      <resolution aspect-ratio="4:3">800x600</resolution>
+      <vsync limit-fps="60.00">false</vsync>
+      <shadow_quality>Off</shadow_quality>
+      <antialiasing_quality antialiasing-type="SMAA">Off</antialiasing_quality>
+      <texture_quality>Low</texture_quality>
+      <texture_filtering filtering-type="Trilinear">2x</texture_filtering>
+      <post_processing>false</post_processing>
+      <screen_shake>false</screen_shake>
+      <engine_multithreading>false</engine_multithreading>
+      <directx_version>Auto</directx_version>
+    </graphics>
+    
+    <sound>
+      <device selectable="false">ACER HD audio</device>
+      <channel_count>Low</channel_count>
+      <sound_effects_volume use-master-setting="false">100</sound_effects_volume>
+      <music_volume use-master-setting="true">100</music_volume>
+      <ambient_sound_volume use-master-setting="true">100</ambient_sound_volume>
+      <dialogue_volume use-master-setting="true">100</dialogue_volume>
+      <item_filter_alert_volume use-master-setting="true">100</item_filter_alert_volume>
+      <reverb_enabled>false</reverb_enabled>
+      <mute_when_in_background>false</mute_when_in_background>
+      <disable_gameplay_event_voices>false</disable_gameplay_event_voices>
+    </sound>
+    
+    <ui>
+      <language>German</language>
+      <chat_language>Same as Language</chat_language>
+      <networking_mode>Predictive</networking_mode>
+      <enable_quest_tracking>true</enable_quest_tracking>
+      <show_corner_map>true</show_corner_map>
+      <auto-center_map>false</auto-center_map>
+      <map_transparency>0</map_transparency>
+      <always_highlight>true</always_highlight>
+      <always_show_sockets>false</always_show_sockets>
+      <key_pickup keybinding="Z">Use Highlight Key</key_pickup>
+      <show_full_descriptions>true</show_full_descriptions>
+      <show_life_mana_levels disable-for-chaos-inoculation="true">true</show_life_mana_levels>
+      <corpse_targeting keybinding="A">Always Enabled</corpse_targeting>
+      <show_global_chat colour="white">true</show_global_chat>
+      <show_trade_chat colour="green">true</show_trade_chat>
+      <show_guild_chat colour="red">true</show_guild_chat>
+      <show_timestamps_in_chat>true</show_timestamps_in_chat>
+      <show_mini_life_bars_on_allies>true</show_mini_life_bars_on_allies>
+      <show_mini_life_bars_on_enemies>true</show_mini_life_bars_on_enemies>
+      <show_mini_life_bars_above_you>true</show_mini_life_bars_above_you>
+      <show_ally_names_on_your_map>true</show_ally_names_on_your_map>
+      <show_clock timezone="UTC-3">true</show_clock>
+      <output_dialogue_to_chat>true</output_dialogue_to_chat>
+      <mousewheel_zoom>false</mousewheel_zoom>
+      <confine_mouse_to_window>true</confine_mouse_to_window>
+      <enable_tutorials>false</enable_tutorials>
+      <default_loot_allocation>Permanent Allocation</default_loot_allocation>
+      <chat_font_size>Small</chat_font_size>
+      <chat_box_width size="absolute">240</chat_box_width>
+      <chat_box_height size="absolute">120</chat_box_height>
+      <list_of_item_filters autoload="true">ZiggyD's Loot Filter</list_of_item_filters>
+    </ui>
+    
+  </profile>
+
+  <profile user="Nocturne32">
+  
+    <graphics>
+      <adapter>NVIDIA GeForce GTX 970M</adapter>
+      <display_mode>Windowed Fullscreen</display_mode>
+      <resolution aspect-ratio="16:9">1920x1080</resolution>
+      <vsync limit-fps="60.00">true</vsync>
+      <shadow_quality>High</shadow_quality>
+      <antialiasing_quality antialiasing-type="SMAA">2x</antialiasing_quality>
+      <texture_quality>High</texture_quality>
+      <texture_filtering filtering-type="Anisotropic">4x</texture_filtering>
+      <post_processing>true</post_processing>
+      <screen_shake>false</screen_shake>
+      <engine_multithreading>false</engine_multithreading>
+      <directx_version>DirectX 9Ex</directx_version>
+    </graphics>
+    
+    <sound>
+      <device selectable="false">ASUS High Definition Audio</device>
+      <channel_count>High</channel_count>
+      <sound_effects_volume use-master-setting="false">66</sound_effects_volume>
+      <music_volume use-master-setting="false">75</music_volume>
+      <ambient_sound_volume use-master-setting="false">0</ambient_sound_volume>
+      <dialogue_volume use-master-setting="false">5</dialogue_volume>
+      <item_filter_alert_volume use-master-setting="false">57</item_filter_alert_volume>
+      <reverb_enabled>false</reverb_enabled>
+      <mute_when_in_background>true</mute_when_in_background>
+      <disable_gameplay_event_voices>false</disable_gameplay_event_voices>
+    </sound>
+    
+    <ui>
+      <language>English</language>
+      <chat_language>English</chat_language>
+      <networking_mode>Auto</networking_mode>
+      <enable_quest_tracking>true</enable_quest_tracking>
+      <show_corner_map>false</show_corner_map>
+      <auto-center_map>false</auto-center_map>
+      <map_transparency>99</map_transparency>
+      <always_highlight>true</always_highlight>
+      <always_show_sockets>true</always_show_sockets>
+      <key_pickup keybinding="Z">Use Highlight Key</key_pickup>
+      <show_full_descriptions>true</show_full_descriptions>
+      <show_life_mana_levels disable-for-chaos-inoculation="false">true</show_life_mana_levels>
+      <corpse_targeting keybinding="A">When Key Held</corpse_targeting>
+      <show_global_chat colour="grey">true</show_global_chat>
+      <show_trade_chat colour="yellow">true</show_trade_chat>
+      <show_guild_chat colour="white">false</show_guild_chat>
+      <show_timestamps_in_chat>false</show_timestamps_in_chat>
+      <show_mini_life_bars_on_allies>false</show_mini_life_bars_on_allies>
+      <show_mini_life_bars_on_enemies>true</show_mini_life_bars_on_enemies>
+      <show_mini_life_bars_above_you>true</show_mini_life_bars_above_you>
+      <show_ally_names_on_your_map>true</show_ally_names_on_your_map>
+      <show_clock timezone="CET+1">true</show_clock>
+      <output_dialogue_to_chat>true</output_dialogue_to_chat>
+      <mousewheel_zoom>false</mousewheel_zoom>
+      <confine_mouse_to_window>false</confine_mouse_to_window>
+      <enable_tutorials>false</enable_tutorials>
+      <default_loot_allocation>Short Allocation</default_loot_allocation>
+      <chat_font_size>Small</chat_font_size>
+      <chat_box_width size="relative">35</chat_box_width>
+      <chat_box_height size="relative">35</chat_box_height>
+      <list_of_item_filters autoload="true">NeverSink's filter STRICT</list_of_item_filters>
+    </ui>
+    
+  </profile>
+
+  <profile user="NugiSSFlvl100">
+  
+    <graphics>
+      <adapter>AMD Radeon RX 570</adapter>
+      <display_mode>Fullscreen</display_mode>
+      <resolution aspect-ratio="16:9">1920×1080</resolution>
+      <vsync limit-fps="60.00">true</vsync>
+      <shadow_quality>Low</shadow_quality>
+      <antialiasing_quality antialiasing-type="FXAA">8x</antialiasing_quality>
+      <texture_quality>High</texture_quality>
+      <texture_filtering filtering-type="Anisotropic">8x</texture_filtering>
+      <post_processing>true</post_processing>
+      <screen_shake>false</screen_shake>
+      <engine_multithreading>true</engine_multithreading>
+      <directx_version>DirectX 9</directx_version>
+    </graphics>
+    
+    <sound>
+      <device selectable="false">Trust GXT 313</device>
+      <channel_count>High</channel_count>
+      <sound_effects_volume use-master-setting="false">30</sound_effects_volume>
+      <music_volume use-master-setting="false">30</music_volume>
+      <ambient_sound_volume use-master-setting="false">30</ambient_sound_volume>
+      <dialogue_volume use-master-setting="false">30</dialogue_volume>
+      <item_filter_alert_volume use-master-setting="false">60</item_filter_alert_volume>
+      <reverb_enabled>false</reverb_enabled>
+      <mute_when_in_background>false</mute_when_in_background>
+      <disable_gameplay_event_voices>false</disable_gameplay_event_voices>
+    </sound>
+    
+    <ui>
+      <language>English</language>
+      <chat_language>Same as Language</chat_language>
+      <networking_mode>Lockstep</networking_mode>
+      <enable_quest_tracking>false</enable_quest_tracking>
+      <show_corner_map>true</show_corner_map>
+      <auto-center_map>true</auto-center_map>
+      <map_transparency>95</map_transparency>
+      <always_highlight>true</always_highlight>
+      <always_show_sockets>true</always_show_sockets>
+      <key_pickup keybinding="N">Use Bound Key</key_pickup>
+      <show_full_descriptions>true</show_full_descriptions>
+      <show_life_mana_levels disable-for-chaos-inoculation="false">false</show_life_mana_levels>
+      <corpse_targeting keybinding="A">Always Enabled</corpse_targeting>
+      <show_global_chat colour="grey">true</show_global_chat>
+      <show_trade_chat colour="green">true</show_trade_chat>
+      <show_guild_chat colour="grey">true</show_guild_chat>
+      <show_timestamps_in_chat>true</show_timestamps_in_chat>
+      <show_mini_life_bars_on_allies>true</show_mini_life_bars_on_allies>
+      <show_mini_life_bars_on_enemies>true</show_mini_life_bars_on_enemies>
+      <show_mini_life_bars_above_you>true</show_mini_life_bars_above_you>
+      <show_ally_names_on_your_map>false</show_ally_names_on_your_map>
+      <show_clock timezone="UTC-8">true</show_clock>
+      <output_dialogue_to_chat>true</output_dialogue_to_chat>
+      <mousewheel_zoom>true</mousewheel_zoom>
+      <confine_mouse_to_window>true</confine_mouse_to_window>
+      <enable_tutorials>false</enable_tutorials>
+      <default_loot_allocation>Short Allocation</default_loot_allocation>
+      <chat_font_size>Normal</chat_font_size>
+      <chat_box_width size="relative">60</chat_box_width>
+      <chat_box_height size="relative">42</chat_box_height>
+      <list_of_item_filters autoload="false">Nugi Speed Run Ranger</list_of_item_filters>
+    </ui>
+    
+  </profile>
+
+</settings>
