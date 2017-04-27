@@ -1,5 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="tomas_novak.xsl"?>
+
+<!-- Odkaz na GITHUB: https://github.com/CubeBender/Path-of-Exile-XML -->
+
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tomas_novak.xsd">
 
   <profile user="cubebender">
