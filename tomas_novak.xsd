@@ -195,7 +195,7 @@
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string">
-                            <xs:attribute type="xs:string" name="keybinding" use="optional"/>
+                            <xs:attribute type="corpses" name="keybinding" use="optional"/>
                           </xs:extension>
                         </xs:simpleContent>
                       </xs:complexType>
@@ -433,6 +433,13 @@
     <xs:enumeration value="Disabled"/>
     <xs:enumeration value="Use Highlight Key"/>
     <xs:enumeration value="Use Bound Key"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <!-- Omezení nastavení typu výběru mrtvol -->
+  <xs:simpleType name="corpses">
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="When Key Held"/>
+    <xs:enumeration value="Always Enabled"/>
     </xs:restriction>
   </xs:simpleType>
    <!-- Omezení nastavení klávesové zkratky pro sbírání předmětů -->
