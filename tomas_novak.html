@@ -1,0 +1,459 @@
+<!Doctype html>
+<html lang="cs">
+
+	<head>
+		<title>Dokumentace HTML od Tomáše Nováka</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Tomáš Novák">
+		<meta name="description" content="Path of Exile - konfigurace nastavení">
+		<meta name="keywords" content="path of exile nastaveni grafika zvuk ui">
+		<meta name="robots" content="all">
+	</head>
+	
+	<body>
+	
+		<header>
+			<h1>Dokumentace HTML od Tomáše Nováka</h1>
+			<nav>
+				<ul>
+					<li><a href="#uvod">Úvod</a></li>
+					<li><a href="#metodika">Metodika</a></li>
+					<li><a href="#elementy">Popis elementů a atributů</a></li>
+					<li><a href="#transformace">Transformace</a></li>
+					<li><a href="#zaver">Závěr</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main>
+			<section id="uvod">
+				<article>
+				  <h2>Úvod</h2>
+					<p>Jako objekt zkoumání semestrální práce jsem vybral hru jménem Path
+          of Exile. Její nastavení je kombinací různých způsobů výběru s omezeními
+          a je tak skvělým kandidátem k procvičení znalostí z předmětu ETE29E.</p>
+          <p>Celý projekt je nahraný na Githubu pod touto adresou:
+          <a href="https://github.com/CubeBender/Path-of-Exile-XML">
+          https://github.com/CubeBender/Path-of-Exile-XML</a></p>
+				</article>
+			</section>
+			
+      <section id="metodika">
+        <h2>Metodika</h2>
+          <article>
+            <h3>Využité programy</h3>
+            <ul>
+              <li>PHP Storm</li>
+              <li>XMLCopyEditor</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Využité stránky</h3> 
+            <ul>
+              <li>Github</li>
+              <li>JSONLint</li>
+              <li>JSON Formatter & Validator</li>
+            </ul>
+          </article>
+      </section>
+						
+      <section id="elementy">
+        <h2>Popis elementů a atributů</h2>
+        <h3>Použité elementy</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td><b>Název</b></td>
+                <td><b>Popis</b></td>
+                <td><b>Schématické omezení</b></td>
+              </tr>
+              <tr>
+                <td>graphics</td>
+                <td>Kategorie s grafickými nastaveními</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>adapter</td>
+                <td>Název grafického adaptéru</td>
+                <td>String</td>
+              </tr>
+              <tr>
+                <td>display_mode</td>
+                <td>Druh zobrazení aplikace</td>
+                <td>Výběr: Windowed, Fullscreen, Windowed Fullscreen</td>
+              </tr>                                         
+              <tr>
+                <td>resolution</td>
+                <td>Rozlišení aplikace</td>
+                <td>Rozlišení od 0x0 do 9999x2999</td>
+              </tr>                                         
+              <tr>
+                <td>vsync</td>
+                <td>Vypnutí/zapnutí technologie VSync</td>
+                <td>Boolean</td>
+              </tr>                                         
+              <tr>
+                <td>shadow_quality</td>
+                <td>Nastavení kvality stínů</td>
+                <td>Výběr: Off, Low, High</td>
+              </tr>                                         
+              <tr>
+                <td>antialiasing_quality</td>
+                <td>Nastavení kvality vyhlazování hran</td>
+                <td>Výber: Off, 2x, 4x, 8x, 16x</td>
+              </tr>                                                                     
+              <tr>
+                <td>texture_quality</td>
+                <td>Nastavení kvality textur</td>
+                <td>Výběr: Low, High</td>
+              </tr>                                                             
+              <tr>
+                <td>texture_filtering</td>
+                <td>Nastevení kvality filtrování textur</td>
+                <td>Výber: Off, 2x, 4x, 8x, 16x</td>
+              </tr>                                                            
+              <tr>
+                <td>post_processing</td>
+                <td>Vypnutí/zapnutí postprocessingu</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>screen_shake</td>
+                <td>Vypnutí/zapnutí otřesů kamery</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>engine_multithreading</td>
+                <td>Vypnutí/zapnutí využití více jader</td>
+                <td>Boolean</td>
+              </tr>                                                            
+              <tr>
+                <td>directx_version</td>
+                <td>Nastavení verze DirecX</td>
+                <td>Výber: DirectX 9, DirectX 9c, DirectX 11</td>
+              </tr>                                                                 
+              <tr>
+                <td>sound</td>
+                <td>Kategorie s nastavením zvuku</td>
+                <td></td>
+              </tr>                                                           
+              <tr>
+                <td>device</td>
+                <td>Výběr primárního zařízení pro přehrávání</td>
+                <td>String</td>
+              </tr>                                                           
+              <tr>
+                <td>channel_count</td>
+                <td>Nastavení počtu audio kanálů</td>
+                <td>Výber: Low, Medium, High</td>
+              </tr>                                                           
+              <tr>
+                <td>sound_effects_volume</td>
+                <td>Nastevení hlasitosti zvukových efektů</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                           
+              <tr>
+                <td>music_volume</td>
+                <td>Nastevení hlasitost hudby ve hře</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                              
+              <tr>
+                <td>ambient_sound_volume</td>
+                <td>Nastevení hlasitosti prostředí</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                            
+              <tr>
+                <td>dialogue_volume</td>
+                <td>Nastevení hlasitosti mluveného slova</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                           
+              <tr>
+                <td>item_filter_alert_volume</td>
+                <td>Nastevení hlasitosti upozornění filtru kořistí</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                           
+              <tr>
+                <td>reverb_enabled</td>
+                <td>Vypnutí/zapnutí ozvěn v 3D prostředí</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>mute_when_in_background</td>
+                <td>Vypnutí/zapnutí zvuku, když je aplikace na pozadí</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>disable_gameplay_event_voices</td>
+                <td>Vypnutí/zapnutí zvuků interakcí postav</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>ui</td>
+                <td>Kategorie s nastavením uživatelského prostředí</td>
+                <td></td>
+              </tr>                                                           
+              <tr>
+                <td>language</td>
+                <td>Nastevení jazyka prostředí</td>
+                <td>Výber: English, French, Italian, Russian, German, Polsky,
+                Portugaes (Brasil)</td>
+              </tr>                                                                           
+              <tr>
+                <td>chat_language</td>
+                <td>Nastevení jazyka chatu</td>
+                <td>Výber: Same as Language, English, French, Italian, Russian, 
+                German, Polsky, Portugaes (Brasil)</td>
+              </tr>                                                                                    
+              <tr>
+                <td>networking_mode</td>
+                <td>Nastevení typu synchronizace se serverem</td>
+                <td>Výber: Auto, Lockstep, Predictive</td>
+              </tr>                                                                                             
+              <tr>
+                <td>enable_quest_tracking</td>
+                <td>Vypnutí/zapnutí sledování úkolů jako součást ui</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>show_corner_map</td>
+                <td>Vypnutí/zapnutí mapy v pravém horním rohu aplikace</td>
+                <td>Boolean</td>
+              </tr>                                                                   
+              <tr>
+                <td>auto-center_map</td>
+                <td>Vypnutí/zapnutí automatického vycentrování mapy</td>
+                <td>Boolean</td>
+              </tr>                                                                   
+              <tr>
+                <td>map_transparency</td>
+                <td>Nastevení průhlednosti mapy</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                           
+              <tr>
+                <td>always_highlight</td>
+                <td>Vypnutí/zapnutí permanentního zobrazení textu kořistí</td>
+                <td>Boolean</td>
+              </tr>                                                                         
+              <tr>
+                <td>always_show_sockets</td>
+                <td>Vypnutí/zapnutí permanentního zobrazení zdířek ve vybavení</td>
+                <td>Boolean</td>
+              </tr>                                                                   
+              <tr>
+                <td>key_pickup</td>
+                <td>Nastevení způsobu sbírání kořisti</td>
+                <td>Výber: Disabled, Use Highlight Key, Use Bound Key</td>
+              </tr>                                                           
+              <tr>
+                <td>show_full_description</td>
+                <td>Vypnutí/zapnutí zobrazování plných popisů</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>show_life_mana_levels</td>
+                <td>Vypnutí/zapnutí zobrazení číselných ukazatelů života a many</td>
+                <td>Boolean</td>
+              </tr>                                                                   
+              <tr>
+                <td>corpse_targeting</td>
+                <td>Nastevení způsobu výběru mrtvol</td>
+                <td>Výber: When Key Held, Always Enabled</td>
+              </tr>                                                           
+              <tr>
+                <td>show_global_chat</td>
+                <td>Vypnutí/zapnutí globálního chatu</td>
+                <td>Boolean</td>
+              </tr>                                                           
+              <tr>
+                <td>show_trade_chat</td>
+                <td>Vypnutí/zapnutí obchodovacího chatu</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>show_guild_chat</td>
+                <td>Vypnutí/zapnutí chatu cechu</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>show_timestamps_in_chat</td>
+                <td>Vypnutí/zapnutí zobrazení časové známky v chatu</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>shiw_mini_life_bars_on_allies</td>
+                <td>Vypnutí/zapnutí ukazatelů života nad spojenci</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>show_mini_life_bars_on_enemies</td>
+                <td>Vypnutí/zapnutí ukazatelů života nad nepřáteli</td>
+                <td>Boolean</td>
+              </tr>                                                            
+              <tr>
+                <td>show_mini_life_bars_above_you</td>
+                <td>Vypnutí/zapnutí ukazatele života tvou mou postavou</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>show_ally_names_on_my_map</td>
+                <td>Vypnutí/zapnutí zobrazení jmen spojenců na mapě</td>
+                <td>Boolean</td>
+              </tr>                                                            
+              <tr>
+                <td>show_clock</td>
+                <td>Vypnutí/zapnutí hodin</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>ourput_dialogue_to_chat</td>
+                <td>Vypnutí/zapnutí zobrazování dialogu v chatu</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>mousewheel_zoom</td>
+                <td>Vypnutí/zapnutí používání kolečka myši k přiblížení</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>confine_mouse_to_window</td>
+                <td>Vypnutí/zapnutí uvěznění myši v okně</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>enable_tutorials</td>
+                <td>Vypnutí/zapnutí pomoci ve hře</td>
+                <td>Boolean</td>
+              </tr>                                                          
+              <tr>
+                <td>default_loot_allocation</td>
+                <td>Zvolení způsobu přiřazení kořisti ve skupině</td>
+                <td>Výběr: Free For All, Short Allocation, Permanent Allocation</td>
+              </tr>                                                           
+              <tr>
+                <td>chat_font_size</td>
+                <td>Nastavení velikosti textu v chatu</td>
+                <td>Výběr: Small, Normal</td>
+              </tr>                                                           
+              <tr>
+                <td>chat_box_width</td>
+                <td>Nastavení šířky chatového okna</td>
+                <td>Integer od 0 do 100</td>
+              </tr>                                                          
+              <tr>
+                <td>chat_box_height</td>
+                <td>Nastavení výšky chatového okna</td>
+                <td>integer od 0 do 100</td>
+              </tr>                                                          
+              <tr>
+                <td>list_of_item_filters</td>
+                <td>Výběr filteru kořisti</td>
+                <td>String</td>
+              </tr>
+            </tbody>
+          </table>
+        <h3>Použité atributy</h3> 
+          <table>
+            <tbody>
+              <tr>
+                <td><b>Název</b></td>
+                <td><b>Popis</b></td>
+                <td><b>Schématické omezení</b></td>
+              </tr>
+              <tr>
+                <td>user</td>
+                <td>Jméno hráče, který používá tento profil</td>
+                <td>String</td>
+              </tr>
+              <tr>
+                <td>aspect-ratio</td>
+                <td>Nastavení poměru stran</td>
+                <td>Výběr: custom, 16:10, 16:9, 5:4, 4:3</td>
+              </tr>
+              <tr>
+                <td>limit-fps</td>
+                <td>Nastavení maximálních snímků za sekundu</td>
+                <td>Float</td>
+              </tr>
+              <tr>
+                <td>antialiasing-type</td>
+                <td>Nastavení typu vyhlazování hran</td>
+                <td>Výběr: SMAA, MSAA, FXAA</td>
+              </tr>
+              <tr>
+                <td>filtering-type</td>
+                <td>Nastavení</td>
+                <td>Výběr: Trilinear, Anisotropic</td>
+              </tr>
+              <tr>
+                <td>use-master-setting</td>
+                <td>Vypnutí/zapnutí přebírání nastavení od hlavního nastavení
+                 zvuku</td>
+                <td>Boolean</td>
+              </tr> 
+              <tr>
+                <td>keybinding</td>
+                <td>Nastavení klávesové zkratky</td>
+                <td>Malá a velká písmena a až z, čísla 0 až 9</td>
+              </tr>
+              <tr>
+                <td>disable-for-chaos-inoculation</td>
+                <td>Vypnutí/zapnutí zobrazování zdraví, pokud je postava pod vlivem
+                chaos inoculation, který sníží život na 1.</td>
+                <td>Boolean</td>
+              </tr>
+              <tr>
+                <td>timezone</td>
+                <td>Nastavení časového pásma</td>
+                <td>String</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>Nastavení metody interpretace velikosti chatového okna</td>
+                <td>Výběr: absilute, relative</td>
+              </tr> 
+              <tr>
+                <td>autoload</td>
+                <td>Vynpnutí/zapnutí automatického načtení filtru kořistí</td>
+                <td>Boolean</td>
+              </tr>
+            </tbody>
+          </table>
+      </section>
+       			
+      <section id="transformace">
+          <article>
+            <h2>Transformace</h2>
+            <p>Transformace je založena na fiktivním scénáři, při kterém se některým
+            hráčům nezobrazuje minimapa. Jedním z možných důvodů tohoto problému
+            je, že je průhlednost mapy nastavena na více jak 97%, nebo není vůbec
+            zobrazena.</p>
+            <p>Transformace tedy vybere všechny hráče, kteří mají hodnotu "map_transparency"
+            nastavenou na 97 až 100. Výsledkem je JSON objekt s jmény uživatelů
+            (user-name) a pár dalších klíčových hodnot v jejich nastavení, jako jsou 
+            map-shown, map-autocenter, map-transparency, adapter, display-mode
+            a resolution.</p>
+          </article>
+      </section>
+      
+      <section id="zaver">
+          <article>
+            <h2>Závěr</h2>
+            <p>Nejvíce mě na této práci překvapilo, že schéma xml může být daleko
+            delší, něž vícero záznamů jeho objektů v xml. Naštěstí se rozsah práce
+            dá snadno obsáhnout pomocí moderních softwarů a internetových služeb,
+            které dokáží generovat, opravovat a i jinak pracovat s požadovanými
+            záznamy.</p>
+            <p>Při této práci mi nejvíce pomohlo využití regulérních výrazů, díky
+            kterým lze přesně definovat povolené vstupy.</p>
+          </article>
+      </section>
+		
+		<footer>
+      <p><b>Autor: Tomáš Novák</b>, email: <a href="mailto:xnovt020@studenti.czu.cz">
+      xnovt020@studenti.czu.cz</a> | Česká Zemědělská Univerzita v Praze, dne 27.4.2017</p>
+		</footer>
+    
+    </main>
+    
+	</body>
+</html>
